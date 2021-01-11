@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF86F86C-E42C-4005-84DE-567C3C2B2FC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FCHelper_v001</RootNamespace>
+    <AssemblyName>FCHelper v001</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>B:\Applications\FCHelper\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\server\myapplication\</InstallUrl>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dapino-Office-Women-Eyes-office-women-yellow.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4B6CD0F4E6AB86434A02C52DCA3F5F609ED114F1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FCHelper v001_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.16\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateTestResultOutlookEmail.cs" />
+    <Compile Include="ETLAutomatedEmails.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HowManyFromCopiesPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HowManyFromCopiesPrompt.Designer.cs">
+      <DependentUpon>Form_HowManyFromCopiesPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NewLogEntryInOpenImplementationNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NewLogEntryInOpenImplementationNotes.Designer.cs">
+      <DependentUpon>Form_NewLogEntryInOpenImplementationNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OpenImplementationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_OpenImplementationList.Designer.cs">
+      <DependentUpon>Form_OpenImplementationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProcessCarryover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProcessCarryover.Designer.cs">
+      <DependentUpon>Form_ProcessCarryover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProcessPaymentAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProcessPaymentAdjustment.Designer.cs">
+      <DependentUpon>Form_ProcessPaymentAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProcessTakeoverFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProcessTakeoverFile.Designer.cs">
+      <DependentUpon>Form_ProcessTakeoverFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UnArchiveImplementation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UnArchiveImplementation.Designer.cs">
+      <DependentUpon>Form_UnArchiveImplementation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetOutlookEmailInformation.cs" />
+    <Compile Include="GetOutlookEmailsFromDesignatedFolder.cs" />
+    <Compile Include="GetSpecificDataFromExcelDatabase.cs" />
+    <Compile Include="PopulateNonstandardWikiLog.cs" />
+    <Compile Include="AddDataToInternalArray.cs" />
+    <Compile Include="ArchiveImplementation.cs" />
+    <Compile Include="CDS_ConnectClaimsSetup.cs" />
+    <Compile Include="CheckTextbox1and2.cs" />
+    <Compile Include="ClearDirectory.cs" />
+    <Compile Include="ClockInTimer.cs" />
+    <Compile Include="CopyExcelDataToTextFile.cs" />
+    <Compile Include="CreateEmailGhostWorkaround.cs" />
+    <Compile Include="DatabaseConnectionHelper.cs" />
+    <Compile Include="FindRTBText.cs" />
+    <Compile Include="Form_CDS_ClaimsTicketDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CDS_ClaimsTicketDescription.Designer.cs">
+      <DependentUpon>Form_CDS_ClaimsTicketDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ClaimsTroubleshooting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ClaimsTroubleshooting.Designer.cs">
+      <DependentUpon>Form_ClaimsTroubleshooting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class_CreateCCFolders.cs" />
+    <Compile Include="CreateOutlookEmail.cs" />
+    <Compile Include="ExcelDataBasePull.cs" />
+    <Compile Include="ExcelDataBasePush.cs" />
+    <Compile Include="ExcelDataBaseUpdate.cs" />
+    <Compile Include="Form_AddImplementation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddImplementation.Designer.cs">
+      <DependentUpon>Form_AddImplementation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Connected Claims Folder Prompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Connected Claims Folder Prompt.Designer.cs">
+      <DependentUpon>Form_Connected Claims Folder Prompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PFMContactRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PFMContactRequest.Designer.cs">
+      <DependentUpon>Form_PFMContactRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProcessFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProcessFile.Designer.cs">
+      <DependentUpon>Form_ProcessFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProcessNonstandardFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProcessNonstandardFile.Designer.cs">
+      <DependentUpon>Form_ProcessNonstandardFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetClientID.cs" />
+    <Compile Include="GetErrorReportFileName.cs" />
+    <Compile Include="GetGroupID.cs" />
+    <Compile Include="GetGroupName.cs" />
+    <Compile Include="GetInputPSVFileNames.cs" />
+    <Compile Include="GetNonstandardFileData.cs" />
+    <Compile Include="GetSelectedEmail.cs" />
+    <Compile Include="GetStringBetweenString.cs" />
+    <Compile Include="GetterSetterInt.cs" />
+    <Compile Include="GetterSetterObject.cs" />
+    <Compile Include="GetterSetterString.cs" />
+    <Compile Include="GetWordFileData.cs" />
+    <Compile Include="ID.cs" />
+    <Compile Include="ImportImpList.cs" />
+    <Compile Include="Form_LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LoginScreen.Designer.cs">
+      <DependentUpon>Form_LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapDrive.cs" />
+    <Compile Include="MOUSE_LeftClick.cs" />
+    <Compile Include="MOUSE_RightClick.cs" />
+    <Compile Include="MOUSE_SetCursor.cs" />
+    <Compile Include="MoveFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushButtonsOnPFM_ContactChange.cs" />
+    <Compile Include="RenameFile.cs" />
+    <Compile Include="SaveAndAppendToRTFFile.cs" />
+    <Compile Include="SaveAndWriteToHTMLFile.cs" />
+    <Compile Include="SaveAndWriteToTextFile.cs" />
+    <Compile Include="SaveAndWriteToRTFFile.cs" />
+    <Compile Include="SearchForNotes.cs" />
+    <Compile Include="SimulateRickClickForContextMenuSelection.cs" />
+    <Compile Include="SortColumns.cs" />
+    <Compile Include="Test_richtextBoxFormattingAndRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_richtextBoxFormattingAndRecovery.Designer.cs">
+      <DependentUpon>Test_richtextBoxFormattingAndRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZipFile.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CDS_ClaimsTicketDescription.resx">
+      <DependentUpon>Form_CDS_ClaimsTicketDescription.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ClaimsTroubleshooting.resx">
+      <DependentUpon>Form_ClaimsTroubleshooting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddImplementation.resx">
+      <DependentUpon>Form_AddImplementation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Connected Claims Folder Prompt.resx">
+      <DependentUpon>Form_Connected Claims Folder Prompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HowManyFromCopiesPrompt.resx">
+      <DependentUpon>Form_HowManyFromCopiesPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NewLogEntryInOpenImplementationNotes.resx">
+      <DependentUpon>Form_NewLogEntryInOpenImplementationNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_OpenImplementationList.resx">
+      <DependentUpon>Form_OpenImplementationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PFMContactRequest.resx">
+      <DependentUpon>Form_PFMContactRequest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LoginScreen.resx">
+      <DependentUpon>Form_LoginScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProcessCarryover.resx">
+      <DependentUpon>Form_ProcessCarryover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProcessFile.resx">
+      <DependentUpon>Form_ProcessFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProcessNonstandardFile.resx">
+      <DependentUpon>Form_ProcessNonstandardFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProcessPaymentAdjustment.resx">
+      <DependentUpon>Form_ProcessPaymentAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProcessTakeoverFile.resx">
+      <DependentUpon>Form_ProcessTakeoverFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UnArchiveImplementation.resx">
+      <DependentUpon>Form_UnArchiveImplementation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Test_richtextBoxFormattingAndRecovery.resx">
+      <DependentUpon>Test_richtextBoxFormattingAndRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FCHelper v001_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB1">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="DTSPipeline">
+      <Guid>{0B4AF18B-3699-4284-9BF7-C29DBE3D78BF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="JRO">
+      <Guid>{AC3B8B4C-B6CA-11D1-9F31-00C04FC29D52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access">
+      <Guid>{4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSDAOSP">
+      <Guid>{E0E270C2-C0BE-11D0-8FE4-00A0C90A6341}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>1033</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSDASC">
+      <Guid>{2206CEB0-19C1-11D1-89E0-00C04FD7A829}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="OleDbSrc">
+      <Guid>{BD0D5E84-9752-42E6-9F65-A7837C598830}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="XDocsDesigner">
+      <Guid>{FD34A372-115F-43CA-8D6F-BBD45FD6F828}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Dapino-Office-Women-Eyes-office-women-yellow.ico" />
+    <Content Include="Resources\Dapino-Office-Women-Eyes-office-women-glasses.ico" />
+    <Content Include="Resources\Dapino-Office-Women-Eyes-office-women-pink.ico" />
+    <Content Include="Resources\Dapino-Office-Women-Eyes-office-women-purple.ico" />
+    <Content Include="Resources\Dapino-Office-Women-Eyes-office-women-red.ico" />
+    <Content Include="Resources\Dapino-Office-Women-Eyes-office-women-yellow.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
