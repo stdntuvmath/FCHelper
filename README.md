@@ -6,3 +6,6 @@ The secondary use for FCHelper is file finding and EDI file processing, which us
 
 ***PLEASE NOTE*** 
 This program requires an ETL specific file structure to do many of its EDI functions and does not auto install the ETL file structure it is designed for. Also, some of the class files are missing from this list because they contain confidential information. 
+
+
+https://github.com/stdntuvmath/FCHelper/issues/1#issue-793053054
