@@ -29,6 +29,8 @@ Key features include:
 
 This significantly reduces administrative overhead and improves consistency across implementations.
 
+![ImpList](Pictures/ImpList.JPG)
+
 ---
 
 ## Secondary Use Case: EDI File Discovery & Processing
