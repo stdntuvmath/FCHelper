@@ -46,6 +46,8 @@ Capabilities include:
 
 This allows users to quickly understand file lineage, diagnose issues, and locate related artifacts without manually traversing directories.
 
+![claimsPic](Pictures/Claims.JPG)
+
 ---
 
 ## Requirements & Limitations
