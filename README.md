@@ -6,6 +6,7 @@
 
 FCHelper functions as a one-stop operational hub for tracking implementation progress, managing contacts, and navigating complex EDI file structures.
 
+![mainPic](main_with_file.JPG)
 ---
 
 ## Primary Use Case: Implementation Tracking
